@@ -17,7 +17,7 @@ This project is based on the pioneering work of [Bilgé Kimyonok](https://github
 ### For Deno
 
 ```typescript
-// To be updated with your Deno import instructions
+import syllabify from "https://raw.githubusercontent.com/UrielCh/syllabify-fr/main/mod.ts";
 ```
 
 ### For Node.js
@@ -31,7 +31,10 @@ npm install syllabify-fr
 Here's how you can use syllabify-fr to syllabify French words:
 
 ```typescript
+// using nodeJS
 import syllabify from 'syllabify-fr';
+// using Deno
+import syllabify from "https://raw.githubusercontent.com/UrielCh/syllabify-fr/main/mod.ts";
 
 const { syllabes, nb, max } = syllabify("exemple");
 
