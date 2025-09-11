@@ -57,5 +57,11 @@ console.log(`Maximum syllable length: ${max}`);
 ## Contributing
 Contributions are welcome! Please feel free to submit a pull request or open an issue if you have suggestions or find a bug.
 
+If you contribute. First install Deno following the instructions at https://deno.land. Then you can run the tests from the repository root:
+
+```bash
+deno test
+```
+
 License
 [MIT](LICENSE.md) © [Uriel Chemouni]
