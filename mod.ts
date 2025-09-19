@@ -7,7 +7,13 @@
  * @param s word to syllabify
  * @returns splited word in syllabes
  */
-export function syllabify(s: string): { syllabes: string[], nb: number, max: number } {
+export interface SyllabifyResult {
+  syllabes: string[];
+  nb: number;
+  max: number;
+}
+
+export function syllabify(s: string): SyllabifyResult {
   if (s.toLowerCase() == "pays") { // Exception pour ce mot ingérable autrement
     return ({ syllabes: ["pa", "ys"], nb: 2, max: 2 });
   }

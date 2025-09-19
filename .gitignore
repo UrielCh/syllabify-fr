@@ -1,1 +1,6 @@
 npm/
+.npmrc
+package.json
+package-lock.json
+.tmp-champ-run.js
+node_modules/
