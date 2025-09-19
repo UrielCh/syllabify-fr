@@ -62,6 +62,8 @@ If you contribute. First install Deno following the instructions at https://deno
 ```bash
 deno test
 ```
-
+# Komunikatu
+to build and published forked package run `deno run -A _build_npm.ts  ${version}
+(cd npm && npm publish --access restricted)`
 License
 [MIT](LICENSE.md) © [Uriel Chemouni]
