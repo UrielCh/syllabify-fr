@@ -6,7 +6,7 @@ Deno.test(function splitBonjour() {
     syllabes: ["bon", "jour"],
     nb: 2,
     max: 2,
-  }
+  };
   const result = syllabify("bonjour");
   assertEquals(result, expected);
 });
@@ -16,18 +16,17 @@ Deno.test(function splitFrançaises() {
     syllabes: ["fran", "çai", "ses"],
     nb: 3,
     max: 3,
-  }
+  };
   const result = syllabify("françaises");
   assertEquals(result, expected);
 });
-
 
 Deno.test(function splitCarrefour() {
   const expected = {
     syllabes: ["ca", "rre", "four"],
     nb: 3,
     max: 3,
-  }
+  };
   const result = syllabify("carrefour");
   assertEquals(result, expected);
 });
@@ -40,31 +39,27 @@ Deno.test(function splitCarrefour() {
     syllabes: ["yeux"],
     nb: 1,
     max: 2,
-  }
+  };
   const result = syllabify("yeux");
   assertEquals(result, expected);
 });
-
 
 Deno.test(function splitChampignon() {
   const expected = {
     syllabes: ["cham", "pi", "gnon"],
     nb: 3,
     max: 3,
-  }
+  };
   const result = syllabify("champignon");
   assertEquals(result, expected);
 });
-
 
 Deno.test(function splitGnome() {
   const expected = {
     syllabes: ["gno", "me"],
     nb: 2,
     max: 2,
-  }
+  };
   const result = syllabify("gnome");
   assertEquals(result, expected);
 });
-
-

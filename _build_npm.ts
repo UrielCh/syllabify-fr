@@ -45,29 +45,29 @@ export async function buildDnt() {
     Deno.exit(-1);
   }
 
-const githubOrg = "ktu-founders";
-const githubName = "syllabify-fr";
+  const githubOrg = "UrielCh";
+  const githubName = "syllabify-fr";
+  const author =
+    "Uriel Chemouni <uchemouni@gmail.com> (https://uriel.ovh/)";
 
-const packageJson: PackageJson = {
-  name: `@${githubOrg}/${githubName}`,
-  author: `${githubOrg}`,
-  license: "MIT",
-  description: "syllabification of French words",
-  keywords: ["syllable","french","deno"],
-  version,                              // déjà calculé
-  homepage: `https://github.com/${githubOrg}/${githubName}`,
-  repository: {
-    type: "git",
-    url: `git+https://github.com/${githubOrg}/${githubName}.git`,
-  },
-  bugs: {
-    url: `https://github.com/${githubOrg}/${githubName}/issues`,
-  },
-  engines: { node: ">=18" },            // remplace "engine-strict"
-  publishConfig: {
-    registry: "https://npm.pkg.github.com"
-  }
-};
+  const packageJson: PackageJson = {
+    name: "syllabify-fr",
+    author,
+    license: "MIT",
+    contributors: [],
+    description: "syllabification of French words",
+    keywords: ["syllable", "french", "deno"],
+    version,
+    homepage: `https://github.com/${githubOrg}/${githubName}`,
+    repository: {
+      type: "git",
+      url: `git+https://github.com/${githubOrg}/${githubName}.git`,
+    },
+    bugs: {
+      url: `https://github.com/${githubOrg}/${githubName}/issues`,
+    },
+    engines: { node: ">=18" },
+  };
   await emptyDir("./npm");
 
   await build({
