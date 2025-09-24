@@ -45,3 +45,26 @@ Deno.test(function splitCarrefour() {
   assertEquals(result, expected);
 });
 
+
+Deno.test(function splitChampignon() {
+  const expected = {
+    syllabes: ["cham", "pi", "gnon"],
+    nb: 3,
+    max: 3,
+  }
+  const result = syllabify("champignon");
+  assertEquals(result, expected);
+});
+
+
+Deno.test(function splitGnome() {
+  const expected = {
+    syllabes: ["gno", "me"],
+    nb: 2,
+    max: 2,
+  }
+  const result = syllabify("gnome");
+  assertEquals(result, expected);
+});
+
+

@@ -7,7 +7,13 @@
  * @param s word to syllabify
  * @returns splited word in syllabes
  */
-export function syllabify(s: string): { syllabes: string[], nb: number, max: number } {
+export interface SyllabifyResult {
+  syllabes: string[];
+  nb: number;
+  max: number;
+}
+
+export function syllabify(s: string): SyllabifyResult {
   if (s.toLowerCase() == "pays") { // Exception pour ce mot ingérable autrement
     return ({ syllabes: ["pa", "ys"], nb: 2, max: 2 });
   }
@@ -195,6 +201,9 @@ export function syllabify(s: string): { syllabes: string[], nb: number, max: num
           } else {
             coupure = 2;
           }
+        } else if ((["g", "G"].indexOf(s.charAt(i)) > -1) && (["n", "N"].indexOf(s.charAt(i + 1)) > -1)) {
+          // treat 'gn' as a single palatal consonant that starts the next syllable (ex: champignon -> cham-pi-gnon)
+          coupure = 1;
         } else if (
           (["t", "T", "p", "P"].indexOf(s.charAt(i + 1)) > -1) &&
           (["s", "S"].indexOf(s.charAt(i + 2)) > -1)
