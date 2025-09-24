@@ -47,14 +47,16 @@ export async function buildDnt() {
 
   const githubOrg = "UrielCh";
   const githubName = "syllabify-fr";
-  const author =
-    "Uriel Chemouni <uchemouni@gmail.com> (https://uriel.ovh/)";
+  const author = "Uriel Chemouni <uchemouni@gmail.com> (https://uriel.ovh/)";
 
   const packageJson: PackageJson = {
     name: "syllabify-fr",
     author,
     license: "MIT",
-    contributors: [],
+    contributors: [{
+      name: "komunikatu",
+      url: "https://github.com/ktu-founders",
+    }],
     description: "syllabification of French words",
     keywords: ["syllable", "french", "deno"],
     version,

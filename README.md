@@ -80,9 +80,12 @@ https://deno.land. Then you can run the tests from the repository root:
 deno test
 ```
 
-# Komunikatu
+# How to build
 
-to build and published forked package run
-`deno run -A _build_npm.ts  ${version}
-(cd npm && npm publish --access restricted)`
+```sh
+deno task npm ${version}
+cd npm
+npm publish
+```
+
 License [MIT](LICENSE.md) © [Uriel Chemouni]
