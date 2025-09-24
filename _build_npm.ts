@@ -1,6 +1,6 @@
 // dnt deps can not be moved to dev_deps.ts
-import { build, emptyDir, type PackageJson } from "https://deno.land/x/dnt@0.40.0/mod.ts";
-import * as pc from "https://deno.land/std@0.221.0/fmt/colors.ts";
+import { build, emptyDir, type PackageJson } from "@deno/dnt";
+import * as pc from "@std/fmt/colors";
 
 export async function buildDnt() {
   let version = Deno.args[0];

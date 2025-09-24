@@ -1,6 +1,12 @@
 {
   "lock": false,
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "npm": "deno run -A _build_npm.ts $1",
+    "test": "deno test"
+  },
+  "imports": {
+    "@deno/dnt": "jsr:@deno/dnt@^0.42.3",
+    "@std/assert": "jsr:@std/assert@^1.0.14",
+    "@std/fmt": "jsr:@std/fmt@^1.0.8"
   }
 }
